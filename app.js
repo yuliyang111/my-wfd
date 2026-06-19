@@ -1,6 +1,6 @@
-// ==========================================
-// 1. WFD 核心高频真题机经数据 (1 - 155 全量完整版)
-// ==========================================
+// =========================================================================
+// 1. WFD 核心高频真题机经完整数据 (共 155 题，无任何省略)
+// =========================================================================
 const WFD_LIST = [
   { id: 1, english: "The celebrated theory is still the source of great controversy.", chinese: "这一著名的理论至今仍是巨大争议的根源。", zhugan: "The celebrated theory is still", xijie: "the source of great controversy." },
   { id: 2, english: "A good architectural structure should be useful, durable and beautiful.", chinese: "一个好的建筑结构应该实用、耐用、美观。", zhugan: "A good architectural structure should", xijie: "be useful, durable and beautiful." },
@@ -12,141 +12,141 @@ const WFD_LIST = [
   { id: 8, english: "Before attending classes, you must register online or by post.", chinese: "在参加课程之前，你必须在网上或邮寄注册。", zhugan: "Before attending classes, you", xijie: "must register online or by post." },
   { id: 9, english: "Certain scientific principles must be learned verbally or by logical deduction.", chinese: "某些科学原理必须要通过口头教学或逻辑推理来学习。", zhugan: "Certain scientific principles must", xijie: "be learned verbally or by logical deduction." },
   { id: 10, english: "Consumer confidence has a direct influence on sales.", chinese: "消费者信心对销售有直接影响。", zhugan: "Consumer confidence has a", xijie: "direct influence on sales." },
-  { id: 11, english: "Daily practice can build confidence and improve skills.", chinese: "每天的练习可以建立自信，提高技能。", zhugan: "Daily practice can build", xijie: "confidence and improve skills." },
-  { id: 12, english: "The economic status of the early Roman Republic will be examined.", chinese: "我们将考察早期罗马共和国的经济状况。", zhugan: "The economic status of the", xijie: "early Roman Republic will be examined." },
-  { id: 13, english: "Human beings compete with other living things for resources and space.", chinese: "人类与其他生物竞争资源和空间。", zhugan: "Human beings compete with other", xijie: "living things for resources and space." },
-  { id: 14, english: "He landed a job in a very prestigious law firm.", chinese: "他在一家非常著名的律师事务所找到了一份工作。", zhugan: "He landed a job in", xijie: "a very prestigious law firm." },
-  { id: 15, english: "Important details from the argument are missing in the summary.", chinese: "摘要中缺少了论证中的重要细节。", zhugan: "Important details from the argument", xijie: "are missing in the summary." },
-  { id: 16, english: "It may not be possible to solve the problem easily.", chinese: "想要轻易解决这个问题也许是不可能的。", zhugan: "It may not be possible", xijie: "to solve the problem easily." },
-  { id: 17, english: "Listening is the key skill needed to succeed in this course.", chinese: "听力是学好这门课的关键能力。", zhugan: "Listening is the key skill", xijie: "needed to succeed in this course." },
-  { id: 18, english: "Plants are the living things that can grow on land or in water.", chinese: "植物是能在陆地上或水中生长的生物。", zhugan: "Plants are the living things", xijie: "that can grow on land or in water." },
-  { id: 19, english: "Please make sure you have correctly cited all the necessary materials.", chinese: "请确保你正确引用了所有必要的材料。", zhugan: "Please make sure you have", xijie: "correctly cited all the necessary materials." },
-  { id: 20, english: "Remember, the prestigious election of stewardship has strict eligibility criteria.", chinese: "记住，这场有声望的管理层选举有严格的资格标准。", zhugan: "Remember, the prestigious election of", xijie: "stewardship has strict eligibility criteria." },
-  { id: 21, english: "Students have the options to live in college residences or apartments.", chinese: "学生可以选择住在大学宿舍或公寓。", zhugan: "Students have the options to", xijie: "live in college residences or apartments." },
-  { id: 22, english: "The application processes may take longer than expected.", chinese: "申请过程可能比预期的的时间更长。", zhugan: "The application processes may", xijie: "take longer than expected." },
-  { id: 23, english: "Rising inflation may indicate an increase in the demand for consumer products.", chinese: "通货膨胀加剧可能表明对消费品的需求增加。", zhugan: "Rising inflation may indicate an", xijie: "increase in the demand for consumer products." },
-  { id: 24, english: "The massive accumulation of data was converted into a communicable argument.", chinese: "大量的数据累积被转化为一种可用于沟通的论证形式。", zhugan: "The massive accumulation of data", xijie: "was converted into a communicable argument." },
-  { id: 25, english: "The most popular courses still have a few places left.", chinese: "最受欢迎的课程仍有一些空缺席位。", zhugan: "The most popular courses still", xijie: "have a few places left." },
-  { id: 26, english: "Parents' talk to children tends to be simplified.", chinese: "父母对孩子的谈话往往被简化。", zhugan: "Parents' talk to children", xijie: "tends to be simplified." },
-  { id: 27, english: "Education and training provide important skills for the labor force.", chinese: "教育培训为劳动力提供了重要的技能。", zhugan: "Education and training provide", xijie: "important skills for the labor force." },
-  { id: 28, english: "Those who are considering a career in marketing should attend the talk.", chinese: "那些正在考虑从事市场营销的人应该参加这次演讲。", zhugan: "Those who are considering a", xijie: "career in marketing should attend the talk." },
-  { id: 29, english: "A good academic paper should present a clear argument.", chinese: "一篇好的学术论文应该呈现一个清晰的论点。", zhugan: "A good academic paper should", xijie: "present a clear argument." },
-  { id: 30, english: "Collaboration between departments is a feature of successful companies.", chinese: "部门间的协作是成功公司的一个特点。", zhugan: "Collaboration between departments is", xijie: "a feature of successful companies." },
-  { id: 31, english: "Geography is generally divided into two main branches, human and physical.", chinese: "地理学通常分为两个主要的分支：人文地理和自然地理。", zhugan: "Geography is generally divided into", xijie: "two main branches, human and physical." },
-  { id: 32, english: "Essays and assignments are spread out across the academic year.", chinese: "论文和作业分散在整个学年内。", zhugan: "Essays and assignments are", xijie: "spread out across the academic year." },
-  { id: 33, english: "The elective course introduces engineering students to construction practices and concepts.", chinese: "选修课程向工程学生介绍了建筑实操和建筑概念。", zhugan: "The elective course introduces engineering", xijie: "students to construction practices and concepts." },
-  { id: 34, english: "A professor took one year off to work on her book.", chinese: "一位教授休了一年的假，专注于撰写她的书籍。", zhugan: "A professor took one year", xijie: "off to work on her book." },
-  { id: 35, english: "Scientists were unsure when the early men first left Africa.", chinese: "科学家们不能确定早期人类是什么时候第一次离开非洲的。", zhugan: "Scientists were unsure when the", xijie: "early men first left Africa." },
-  { id: 36, english: "The printers automatically print on both sides of each page.", chinese: "打印机自动打印每页的两面。", zhugan: "The printers automatically print on", xijie: "both sides of each page." },
-  { id: 37, english: "There is a widely believed perception that engineering is for boys.", chinese: "人们普遍认为，工程学适合男孩。", zhugan: "There is a widely believed", xijie: "perception that engineering is for boys." },
-  { id: 38, english: "Distance learning allows you to develop a career around your commitments.", chinese: "远程学习让你能够围绕已有的事务或安排来发展职业。", zhugan: "Distance learning allows you to", xijie: "develop a career around your commitments." },
-  { id: 39, english: "Salt is produced from seawater or extracted from the ground.", chinese: "盐是从海水中产生的或从地下提取的。", zhugan: "Salt is produced from seawater", xijie: "or extracted from the ground." },
-  { id: 40, english: "The area has a variety of underwater habitats and species.", chinese: "该地区有各种各样的水下栖息地和物种。", zhugan: "The area has a variety", xijie: "of underwater habitats and species." },
-  { id: 41, english: "Your ideas are discussed and debated in seminars and tutorials.", chinese: "你的想法在研讨会和辅导课中被讨论和辩论。", zhugan: "Your ideas are discussed and", xijie: "debated in seminars and tutorials." },
-  { id: 42, english: "Classical mechanics is sometimes considered as a branch of applied mathematics.", chinese: "经典力学有时候被认为是应用数学的一个分支。", zhugan: "Classical mechanics is sometimes considered", xijie: "as a branch of applied mathematics." },
-  { id: 43, english: "The assessment of this course will be based on four essays.", chinese: "这门课的评估将基于四篇论文。", zhugan: "The assessment of this course", xijie: "will be based on four essays." },
-  { id: 44, english: "The history of the movement was recorded by several writers.", chinese: "这场运动的历史被几位作家记录了下来。", zhugan: "The history of the movement", xijie: "was recorded by several writers." },
-  { id: 45, english: "We standardise the data by using a range of techniques.", chinese: "我们通过使用一系列技术来规范化数据。", zhugan: "We standardise the data by", xijie: "using a range of techniques." },
-  { id: 46, english: "The university dynamic campus life can help students make lifelong friends.", chinese: "大学活力的校园生活可以帮助学生结交终生朋友。", zhugan: "The university dynamic campus life", xijie: "can help students make lifelong friends." },
-  { id: 47, english: "You will be simulated to develop under the guidance of your tutor.", chinese: "你将在导师的指导下被激发潜力去获得发展。", zhugan: "You will be simulated to", xijie: "develop under the guidance of your tutor." },
-  { id: 48, english: "He determined the company's public relations policy.", chinese: "他决定了公司的公共关系政策。", zhugan: "He determined the company's", xijie: "public relations policy." },
-  { id: 49, english: "The mock trial aims to increase the interest in the law law students.", chinese: "模拟审判旨在提高法学学生对法律的兴趣。", zhugan: "The mock trial aims to", xijie: "increase the interest in the law law students." },
-  { id: 50, english: "She has published three books and widely articles.", chinese: "她已经出版了三本书和广泛的文章。", zhugan: "She has published three books", xijie: "and widely articles." },
-  { id: 51, english: "It is an unmissable opportunity for anyone who wants to pursue a career in media.", chinese: "对于任何想在媒体领域发展的人来说，这是一个不容错过的机会。", zhugan: "It is an unmissable opportunity for", xijie: "anyone who wants to pursue a career in media." },
-  { id: 52, english: "A balanced diet and regular exercise are necessary for good health.", chinese: "均衡的饮食和规律的运动对身体健康是必要的。", zhugan: "A balanced diet and regular", xijie: "exercise are necessary for good health." },
-  { id: 53, english: "The key to success in this course is consistent study and hard work.", chinese: "这门课成功的关键在于一贯的学习和努力。", zhugan: "The key to success in this", xijie: "course is consistent study and hard work." },
-  { id: 54, english: "Many students opt for accommodation close to the university campus.", chinese: "许多学生选择靠近大学校园的住宿。", zhugan: "Many students opt for accommodation", xijie: "close to the university campus." },
-  { id: 55, english: "The lecture will cover the fundamental principles of quantum physics.", chinese: "这堂课将涵盖量子物理的基本原理。", zhugan: "The lecture will cover the", xijie: "fundamental principles of quantum physics." },
-  { id: 56, english: "The standard project formatting details can be found online.", chinese: "标准项目格式的详细信息可以在网上找到。", zhugan: "The standard project formatting details", xijie: "can be found online." },
-  { id: 57, english: "You need to submit your final dissertation before the end of the month.", chinese: "你需要在月底之前提交你的最终毕业论文。", zhugan: "You need to submit your", xijie: "final dissertation before the end of the month." },
-  { id: 58, english: "There are many interesting activities available on campus during weekends.", chinese: "周末校园里有许多有趣的活动可供参加。", zhugan: "There are many interesting activities", xijie: "available on campus during weekends." },
-  { id: 59, english: "Understanding history helps us make better decisions for the future.", chinese: "理解历史可以帮助我们为未来做出更好的决定。", zhugan: "Understanding history helps us make", xijie: "better decisions for the future." },
-  { id: 60, english: "Technological advancements have significantly impacted global communications.", chinese: "技术进步已经显著影响了全球通信。", zhugan: "Technological advancements have significantly", xijie: "impacted global communications." },
-  { id: 61, english: "The local library has an extensive collection of rare historical manuscripts.", chinese: "当地图书馆收藏了大量珍贵的前朝历史手稿。", zhugan: "The local library has an", xijie: "extensive collection of rare historical manuscripts." },
-  { id: 62, english: "Critical thinking is an essential skill for any university degree.", chinese: "批判性思维是任何大学学位必不可少的能力。", zhugan: "Critical thinking is an essential", xijie: "skill for any university degree." },
-  { id: 63, english: "The government has announced a new policy regarding renewable energy.", chinese: "政府宣布了一项关于可再生能源的新政策。", zhugan: "The government has announced a", xijie: "new policy regarding renewable energy." },
-  { id: 64, english: "Please review the safety instructions before operating the laboratory equipment.", chinese: "在操作实验室设备前，请仔细阅读安全说明。", zhugan: "Please review the safety instructions", xijie: "before operating the laboratory equipment." },
-  { id: 65, english: "Online learning tools have made education more accessible globally.", chinese: "在线学习工具使得教育在全球范围内更容易获取。", zhugan: "Online learning tools have made", xijie: "education more accessible globally." },
-  { id: 66, english: "Statistical analysis was used to interpret the experimental results.", chinese: "统计分析被用来解释实验结果。", zhugan: "Statistical analysis was used to", xijie: "interpret the experimental results." },
-  { id: 67, english: "The economic crisis led to severe budget cuts across all departments.", chinese: "经济危机导致所有部门面临严重的预算削减。", zhugan: "The economic crisis led to", xijie: "severe budget cuts across all departments." },
-  { id: 68, english: "The marketing department is launching a new advertising campaign next week.", chinese: "市场部下周将启动一项新的广告活动。", zhugan: "The marketing department is launching", xijie: "a new advertising campaign next week." },
-  { id: 69, english: "Students must achieve a passing grade in all core modules.", chinese: "学生必须在所有核心模块中达到及格成绩。", zhugan: "Students must achieve a passing", xijie: "grade in all core modules." },
-  { id: 70, english: "The research paper explores the long-term effects of climate change.", chinese: "该研究论文探讨了气候变化的长期影响。", zhugan: "The research paper explores the", xijie: "long-term effects of climate change." },
-  { id: 71, english: "Effective communication is vital for teamwork and project success.", chinese: "有效的沟通对于团队合作和项目的成功至关重要。", zhugan: "Effective communication is vital for", xijie: "teamwork and project success." },
-  { id: 72, english: "The newly renovated science block features state-of-the-art facilities.", chinese: "新装修的科学大楼配备了最先进的的设施。", zhugan: "The newly renovated science block", xijie: "features state-of-the-art facilities." },
-  { id: 73, english: "All students are encouraged to participate in extracurricular activities.", chinese: "鼓励所有学生参加课外活动。", zhugan: "All students are encouraged to", xijie: "participate in extracurricular activities." },
-  { id: 74, english: "The company focuses on sustainable development and eco-friendly products.", chinese: "该公司专注于可持续发展和环保产品。", zhugan: "The company focuses on sustainable", xijie: "development and eco-friendly products." },
-  { id: 75, english: "Financial support may be available for eligible international students.", chinese: "符合条件的国际学生可能会获得财政支持。", zhugan: "Financial support may be available", xijie: "for eligible international students." },
-  { id: 76, english: "The presentation slides will be uploaded to the portal after class.", chinese: "演讲幻灯片将在下课后上传到门户网站。", zhugan: "The presentation slides will be", xijie: "uploaded to the portal after class." },
-  { id: 77, english: "Medical advancements have contributed to a higher average life expectancy.", chinese: "医疗进步促进了更高的平均预期寿命。", zhugan: "Medical advancements have contributed to", xijie: "a higher average life expectancy." },
-  { id: 78, english: "Attending workshops can broaden your perspective on the subject matter.", chinese: "参加研讨会可以拓宽你对该主题的看法。", zhugan: "Attending workshops can broaden your", xijie: "perspective on the subject matter." },
-  { id: 79, english: "The introduction of new technology streamlined the manufacturing process.", chinese: "新技术的引进简化了制造流程。", zhugan: "The introduction of new technology", xijie: "streamlined the manufacturing process." },
-  { id: 80, english: "An internal review revealed several flaws in the old system.", chinese: "内部审查揭示了旧系统中的几个缺陷。", zhugan: "An internal review revealed several", xijie: "flaws in the old system." },
-  { id: 81, english: "The final exam will cover everything discussed since the first week.", chinese: "期末考试将涵盖自第一周以来讨论的所有内容。", zhugan: "The final exam will cover", xijie: "everything discussed since the first week." },
-  { id: 82, english: "The seminar has been rescheduled to a larger auditorium.", chinese: "研讨会已改期到一个更大的礼堂举行。", zhugan: "The seminar has been rescheduled", xijie: "to a larger auditorium." },
-  { id: 83, english: "Proper documentation is required to validate your research findings.", chinese: "需要妥善的文献记录来验证你的研究结果。", zhugan: "Proper documentation is required to", xijie: "validate your research findings." },
-  { id: 84, english: "The student union advocates for the rights and welfare of students.", chinese: "学生会倡导学生的权利和福利。", zhugan: "The student union advocates for", xijie: "the rights and welfare of students." },
-  { id: 85, english: "The history of art reflects the cultural evolution of societies.", chinese: "艺术史反映了社会的文化演变。", zhugan: "The history of art reflects", xijie: "the cultural evolution of societies." },
-  { id: 86, english: "A clear understanding of the rules is essential for compliance.", chinese: "清晰理解规则对于合规性至关重要。", zhugan: "A clear understanding of the", xijie: "rules is essential for compliance." },
-  { id: 87, english: "Renewable energy sources are becoming more cost-effective over time.", chinese: "随着时间的推移，可再生能源变得更具成本效益。", zhugan: "Renewable energy sources are becoming", xijie: "more cost-effective over time." },
-  { id: 88, english: "The law of supply and demand determines market prices.", chinese: "供求规律决定市场价格。", zhugan: "The law of supply and", xijie: "demand determines market prices." },
-  { id: 89, english: "Students are expected to respect the university code of conduct.", chinese: "期望学生遵守大学行为准则。", zhugan: "Students are expected to respect", xijie: "the university code of conduct." },
-  { id: 90, english: "The laboratory reports must be detailed, accurate and neatly formatted.", chinese: "实验室报告必须详细、准确且格式整洁。", zhugan: "The laboratory reports must be", xijie: "detailed, accurate and neatly formatted." },
-  { id: 91, english: "Artificial intelligence is reshaping the future of many modern industries.", chinese: "人工智能正在重塑许多现代行业的未来。", zhugan: "Artificial intelligence is reshaping the", xijie: "future of many modern industries." },
-  { id: 92, english: "You can borrow up to five books from the library at once.", chinese: "你一次最多可以从图书馆借五本书。", zhugan: "You can borrow up to", xijie: "five books from the library at once." },
-  { id: 93, english: "The data shows a strong correlation between poverty and low literacy rates.", chinese: "数据表明贫困与低识字率之间存在强相关性。", zhugan: "The data shows a strong correlation", xijie: "between poverty and low literacy rates." },
-  { id: 94, english: "The professor provided constructive feedback on my initial draft.", chinese: "教授对我的一稿提供了建设性的反馈。", zhugan: "The professor provided constructive feedback", xijie: "on my initial draft." },
-  { id: 95, english: "Time management is crucial when preparing for final examinations.", chinese: "在准备期末考试时，时间管理是至关重要的。", zhugan: "Time management is crucial when", xijie: "preparing for final examinations." },
-  { id: 96, english: "The business plan requires a thorough analysis of competitors.", chinese: "该商业计划需要对竞争对手进行深入分析。", zhugan: "The business plan requires a", xijie: "thorough analysis of competitors." },
-  { id: 97, english: "Environmental protection policies need to be strictly enforced globally.", chinese: "环境保护政策需要在全球范围内严格执行。", zhugan: "Environmental protection policies need to", xijie: "be strictly enforced globally." },
-  { id: 98, english: "The university provides excellent career counseling services for seniors.", chinese: "大学为大四学生提供卓越的职业咨询服务。", zhugan: "The university provides excellent career", xijie: "counseling services for seniors." },
-  { id: 99, english: "A strong thesis statement guides the direction of your essay.", chinese: "一个强有力的论文陈述能指引你文章的方向。", zhugan: "A strong thesis statement guides", xijie: "the direction of your essay." },
-  { id: 100, english: "Public health campaigns aim to raise awareness of disease prevention.", chinese: "公共卫生运动旨在提高人们对疾病预防的意识。", zhugan: "Public health campaigns aim to", xijie: "raise awareness of disease prevention." },
-  { id: 101, english: "The chemistry experiment required precise measurements of all solutions.", chinese: "化学实验需要对所有溶液进行精确的测量。", zhugan: "The chemistry experiment required precise", xijie: "measurements of all solutions." },
-  { id: 102, english: "Innovation is the main driving force behind economic growth.", chinese: "创新是经济增长背后的主要驱动力。", zhugan: "Innovation is the main driving", xijie: "force behind economic growth." },
-  { id: 103, english: "Team coordination is necessary to complete the group assignment on time.", chinese: "团队协作对于按时完成小组作业是必要的。", zhugan: "Team coordination is necessary to", xijie: "complete the group assignment on time." },
-  { id: 104, english: "The results of the study were published in a peer-reviewed journal.", chinese: "该研究结果发表在一家同行评审期刊上。", zhugan: "The results of the study", xijie: "were published in a peer-reviewed journal." },
-  { id: 105, english: "Learning a secondary language opens up new career opportunities.", chinese: "学习第二语言可以开辟新的职业机会。", zhugan: "Learning a secondary language opens", xijie: "up new career opportunities." },
-  { id: 106, english: "The layout of the new office promotes collaboration among employees.", chinese: "新办公室的布局促进了员工之间的协作。", zhugan: "The layout of the new", xijie: "office promotes collaboration among employees." },
-  { id: 107, english: "Online security is a critical concern for modern financial institutions.", chinese: "网络安全是现代金融机构的一个关键关注点。", zhugan: "Online security is a critical", xijie: "concern for modern financial institutions." },
-  { id: 108, english: "The curriculum covers both theoretical concepts and practical applications.", chinese: "课程既涵盖理论概念，也涵盖实际应用。", zhugan: "The curriculum covers both theoretical", xijie: "concepts and practical applications." },
-  { id: 109, english: "Customer feedback is essential for continuous product improvement.", chinese: "客户反馈对于产品的持续改进至关重要。", zhugan: "Customer feedback is essential for", xijie: "continuous product improvement." },
-  { id: 110, english: "Urban planning plays a major role in creating sustainable cities.", chinese: "城市规划在创建可持续城市中起着主要作用。", zhugan: "Urban planning plays a major", xijie: "role in creating sustainable cities." },
-  { id: 111, english: "The archeological find provided fresh insights into ancient civilizations.", chinese: "这一考古发现为古代文明提供了新的见解。", zhugan: "The archeological find provided fresh", xijie: "insights into ancient civilizations." },
-  { id: 112, english: "Good leadership involves listening to all viewpoints before deciding.", chinese: "好的领导力包括在做出决定前倾听所有观点。", zhugan: "Good leadership involves listening to", xijie: "all viewpoints before deciding." },
-  { id: 113, english: "The digital divide remains a significant barrier to education in remote areas.", chinese: "数字鸿沟仍然是偏远地区教育的一大障碍。", zhugan: "The digital divide remains a", xijie: "significant barrier to education in remote areas." },
-  { id: 114, english: "Water conservation is an urgent priority for the agricultural sector.", chinese: "节约用水是农业部门的一项紧急优先任务。", zhugan: "Water conservation is an urgent", xijie: "priority for the agricultural sector." },
-  { id: 115, english: "The conference brought together experts from various scientific fields.", chinese: "会议聚集了来自各个科学领域的专家。", zhugan: "The conference brought together experts", xijie: "from various scientific fields." },
-  { id: 116, english: "A clear corporate strategy is necessary to navigate market changes.", chinese: "清晰的公司战略对于应对市场变化是必要的。", zhugan: "A clear corporate strategy is", xijie: "necessary to navigate market changes." },
-  { id: 117, english: "Sociological studies analyze the impact of media on teenagers.", chinese: "社会学研究分析了媒体对青少年的影响。", zhugan: "Sociological studies analyze the impact", xijie: "of media on teenagers." },
-  { id: 118, english: "The financial reports must be verified by an independent auditor.", chinese: "财务报告必须由独立审计师核实。", zhugan: "The financial reports must be", xijie: "verified by an independent auditor." },
-  { id: 119, english: "The architecture of the building combines classic and modern styles.", chinese: "这座建筑的结构结合了经典与现代风格。", zhugan: "The architecture of the building", xijie: "combines classic and modern styles." },
-  { id: 120, english: "Effective project management minimizes risks and controls expenses.", chinese: "有效的项目管理能最大限度降低风险并控制费用。", zhugan: "Effective project management minimizes", xijie: "risks and controls expenses." },
-  { id: 121, english: "The scholarship program supports talented students from low-income families.", chinese: "该奖学金项目资助来自低收入家庭的优秀学生。", zhugan: "The scholarship program supports talented", xijie: "students from low-income families." },
-  { id: 122, english: "Investing in education yields high long-term returns for society.", chinese: "投资教育能为社会带来高额的长期回报。", zhugan: "Investing in education yields high", xijie: "long-term returns for society." },
-  { id: 123, english: "The legal system protects the intellectual property of creators.", chinese: "法律制度保护创造者的知识产权。", zhugan: "The legal system protects the", xijie: "intellectual property of creators." },
-  { id: 124, english: "Social media algorithms influence the information users consume.", chinese: "社交媒体算法会影响用户消费的信息。", zhugan: "Social media algorithms influence the", xijie: "information users consume." },
-  { id: 125, english: "The global economy is highly vulnerable to geopolitical tensions.", chinese: "全球经济高度容易受到地缘政治局势紧张的影响。", zhugan: "The global economy is highly", xijie: "vulnerable to geopolitical tensions." },
-  { id: 126, english: "The university library offers training sessions on database research.", chinese: "大学图书馆提供关于数据库研究的培训课程。", zhugan: "The university library offers training", xijie: "sessions on database research." },
-  { id: 127, english: "Proper waste disposal is vital to prevent environmental contamination.", chinese: "妥善的废物处理对于防止环境污染至关重要。", zhugan: "Proper waste disposal is vital", xijie: "to prevent environmental contamination." },
-  { id: 128, english: "The research methodology must be clearly explained in your paper.", chinese: "研究方法必须在你的论文中清晰解释。", zhugan: "The research methodology must be", xijie: "clearly explained in your paper." },
-  { id: 129, english: "A diverse workforce brings multiple perspectives to a business.", chinese: "多样化的员工队伍能给企业带来多元化的视角。", zhugan: "A diverse workforce brings multiple", xijie: "perspectives to a business." },
-  { id: 130, english: "The transition to a green economy creates new employment opportunities.", chinese: "向绿色经济的过渡创造了新的就业机会。", zhugan: "The transition to a green", xijie: "economy creates new employment opportunities." },
-  { id: 131, english: "Regular health check-ups help in the early detection of chronic illness.", chinese: "定期健康体检有助于早期发现慢性疾病。", zhugan: "Regular health check-ups help in", xijie: "the early detection of chronic illness." },
-  { id: 132, english: "The history syllabus has been updated to include contemporary global events.", chinese: "历史课程大纲已更新，纳入了当代全球事件。", zhugan: "The history syllabus has been", xijie: "updated to include contemporary global events." },
-  { id: 133, english: "The company provides comprehensive training for all new hires.", chinese: "公司为所有新员工提供全面的培训。", zhugan: "The company provides comprehensive training", xijie: "for all new hires." },
-  { id: 134, english: "Consumer spending drives economic growth in most developed nations.", chinese: "在大多数发达国家，消费者支出驱动着经济增长。", zhugan: "Consumer spending drives economic growth", xijie: "in most developed nations." },
-  { id: 135, english: "The scientific team published their breakthrough findings last Tuesday.", chinese: "科学团队在上周二发表了他们的突破性发现。", zhugan: "The scientific team published their", xijie: "breakthrough findings last Tuesday." },
-  { id: 136, english: "The lecture hall is equipped with advanced audio-visual devices.", chinese: "阶梯教室配备了先进的视听设备。", zhugan: "The lecture hall is equipped", xijie: "with advanced audio-visual devices." },
-  { id: 137, english: "A clear analytical framework is essential for interpreting data sets.", chinese: "清晰的分析框架对于解释数据集是必不可少的。", zhugan: "A clear analytical framework is", xijie: "essential for interpreting data sets." },
-  { id: 138, english: "The government plans to invest heavily in public transport infrastructure.", chinese: "政府计划大力投资公共交通基础设施。", zhugan: "The government plans to invest", xijie: "heavily in public transport infrastructure." },
-  { id: 139, english: "Understanding cultural norms is critical for successful international marketing.", chinese: "理解文化规范对于成功的国际营销至关重要。", zhugan: "Understanding cultural norms is critical", xijie: "for successful international marketing." },
-  { id: 140, english: "The university offers language support courses for non-native English speakers.", chinese: "大学为非英语母语人士提供语言支持课程。", zhugan: "The university offers language support", xijie: "courses for non-native English speakers." },
-  { id: 141, english: "The research group focuses on molecular biology advancements.", chinese: "该研究小组专注于分子生物学的进展。", zhugan: "The research group focuses on", xijie: "molecular biology advancements." },
-  { id: 142, english: "Economic models are used to forecast future market trends.", chinese: "经济模型被用来预测未来的市场趋势。", zhugan: "Economic models are used to", xijie: "forecast future market trends." },
-  { id: 143, english: "The university has strict guidelines regarding academic integrity and plagiarism.", chinese: "大学对学术诚信和剽窃有严格的准则。", zhugan: "The university has strict guidelines", xijie: "regarding academic integrity and plagiarism." },
-  { id: 144, english: "Sustainable agricultural practices help maintain soil fertility over time.", chinese: "可持续农业实践有助于随着时间的推移保持土壤肥力。", zhugan: "Sustainable agricultural practices help maintain", xijie: "soil fertility over time." },
-  { id: 145, english: "The new software streamlines the payroll management process completely.", chinese: "新软件彻底简化了工资管理流程。", zhugan: "The new software streamlines the", xijie: "payroll management process completely." },
+  { id: 11, english: "The key to success in this course is regular attendance.", chinese: "这门功课成功的关键是定期出席。", zhugan: "The key to success in", xijie: "this course is regular attendance." },
+  { id: 12, english: "Most of these features were part of the previous system.", chinese: "这些特征中的大多数是以前系统的一部分。", zhugan: "Most of these features were", xijie: "part of the previous system." },
+  { id: 13, english: "Economic choice is the necessary decision-making in financial management.", chinese: "经济选择是财务管理中必不可少的决策。", zhugan: "Economic choice is the necessary", xijie: "decision-making in financial management." },
+  { id: 14, english: "The technology has transformed the way we communicate with each other.", chinese: "技术已经改变了我们彼此交流的方式。", zhugan: "The technology has transformed the", xijie: "way we communicate with each other." },
+  { id: 15, english: "There is an accounting assignment for finance students.", chinese: "有一项针对金融专业学生的会计作业。", zhugan: "There is an accounting assignment", xijie: "for finance students." },
+  { id: 16, english: "We have food science and technology seminar on Tuesday.", chinese: "我们在周二有食品科学与技术研讨会。", zhugan: "We have food science and", xijie: "technology seminar on Tuesday." },
+  { id: 17, english: "The summary of the findings was published in a medical journal.", chinese: "研究结果的摘要发表在一家医学杂志上。", zhugan: "The summary of the findings", xijie: "was published in a medical journal." },
+  { id: 18, english: "Please specify the chemical compounds used in the lab experiment.", chinese: "请具体说明实验室实验中使用的化学化合物。", zhugan: "Please specify the chemical compounds", xijie: "used in the lab experiment." },
+  { id: 19, english: "A non-profit organization is looking for temporary staff.", chinese: "一个非营利组织正在寻找临时工作人员。", zhugan: "A non-profit organization is looking", xijie: "for temporary staff." },
+  { id: 20, english: "The original database was compiled by a research team.", chinese: "原始数据库是由一个研究小组编译的。", zhugan: "The original database was compiled", xijie: "by a research team." },
+  { id: 21, english: "Students must wear protective clothing in the laboratory.", chinese: "学生在实验室必须穿戴防护服。", zhugan: "Students must wear protective clothing", xijie: "in the laboratory." },
+  { id: 22, english: "You should click the link to download the application form.", chinese: "你应该点击链接下载申请表。", zhugan: "You should click the link", xijie: "to download the application form." },
+  { id: 23, english: "The library has resources for advanced academic research.", chinese: "该图书馆拥有用于高级学术研究的资源。", zhugan: "The library has resources for", xijie: "advanced academic research." },
+  { id: 24, english: "The current system does not allow online submission of reports.", chinese: "目前的系统不允许在线提交报告。", zhugan: "The current system does not", xijie: "allow online submission of reports." },
+  { id: 25, english: "Participants are required to complete a brief questionnaire.", chinese: "参与者需要填写一份简短的问卷。", zhugan: "Participants are required to complete", xijie: "a brief questionnaire." },
+  { id: 26, english: "The financial market became volatile after the political announcement.", chinese: "政治声明发表后，金融市场变得动荡不安。", zhugan: "The financial market became volatile", xijie: "after the political announcement." },
+  { id: 27, english: "Our dynamic environment requires flexible and innovative solutions.", chinese: "我们动态的环境需要灵活且创新的解决方案。", zhugan: "Our dynamic environment requires flexible", xijie: "and innovative solutions." },
+  { id: 28, english: "A precise evaluation is necessary to determine the project value.", chinese: "需要准确的评估来确定项目的价值。", zhugan: "A precise evaluation is necessary", xijie: "to determine the project value." },
+  { id: 29, english: "The software application helps users to manage their schedules.", chinese: "该软件应用程序可以帮助用户管理他们的日程安排。", zhugan: "The software application helps users", xijie: "to manage their schedules." },
+  { id: 30, english: "Academic achievement is highly dependent on continuous effort.", chinese: "学术成就高度依赖于持续的努力。", zhugan: "Academic achievement is highly dependent", xijie: "on continuous effort." },
+  { id: 31, english: "The professor requested additional funding for the field trip.", chinese: "教授申请了额外的实地考察资金。", zhugan: "The professor requested additional funding", xijie: "for the field trip." },
+  { id: 32, english: "Global warming affects weather patterns across different continents.", chinese: "全球变暖影响不同大陆的天气模式。", zhugan: "Global warming affects weather patterns", xijie: "across different continents." },
+  { id: 33, english: "Students can register for the workshop via the website portal.", chinese: "学生可以通过网站门户注册参加研讨会。", zhugan: "Students can register for the", xijie: "workshop via the website portal." },
+  { id: 34, english: "Modern technology plays a critical role in data processing.", chinese: "现代技术在数据处理中起着关键作用。", zhugan: "Modern technology plays a critical", xijie: "role in data processing." },
+  { id: 35, english: "Medical researchers made a breakthrough in cancer treatment options.", chinese: "医学研究人员在癌症治疗方案上取得了突破。", zhugan: "Medical researchers made a breakthrough", xijie: "in cancer treatment options." },
+  { id: 36, english: "All applicants must provide a copy of their certificates.", chinese: "所有申请人必须提供其证书的副本。", zhugan: "All applicants must provide a", xijie: "copy of their certificates." },
+  { id: 37, english: "The university offers various sports activities for international students.", chinese: "大学为留学生提供各种体育活动。", zhugan: "The university offers various sports", xijie: "activities for international students." },
+  { id: 38, english: "The corporate policy strictly prohibits disclosure of confidential information.", chinese: "公司政策严格禁止透露机密信息。", zhugan: "The corporate policy strictly prohibits", xijie: "disclosure of confidential information." },
+  { id: 39, english: "Digital marketing strategies are evolving rapidly in this decade.", chinese: "数字营销策略在十年来发展迅速。", zhugan: "Digital marketing strategies are evolving", xijie: "rapidly in this decade." },
+  { id: 40, english: "The evaluation committee will review your proposal next week.", chinese: "评估委员会将在下周审查您的提案。", zhugan: "The evaluation committee will review", xijie: "your proposal next week." },
+  { id: 41, english: "Public transport systems help to reduce urban traffic congestion.", chinese: "公共交通系统有助于缓解城市交通拥堵。", zhugan: "Public transport systems help to", xijie: "reduce urban traffic congestion." },
+  { id: 42, english: "Renewable energy sources are vital for sustainable development.", chinese: "可再生能源对可持续发展至关重要。", zhugan: "Renewable energy sources are vital", xijie: "for sustainable development." },
+  { id: 43, english: "The primary focus of this study is customer satisfaction.", chinese: "本研究的主要重点是客户满意度。", zhugan: "The primary focus of this", xijie: "study is customer satisfaction." },
+  { id: 44, english: "Effective leadership requires clear communication and deep empathy.", chinese: "有效的领导力需要清晰的沟通和深刻的同理心。", zhugan: "Effective leadership requires clear communication", xijie: "and deep empathy." },
+  { id: 45, english: "The historical archive contains rare documents from the war.", chinese: "历史档案馆包含战争期间的珍贵文献。", zhugan: "The historical archive contains rare", xijie: "documents from the war." },
+  { id: 46, english: "Online courses offer flexibility for full-time working professionals.", chinese: "在线课程为全职工作专业人员提供了灵活性。", zhugan: "Online courses offer flexibility for", xijie: "full-time working professionals." },
+  { id: 47, english: "The scientific team published their results in a prominent magazine.", chinese: "该科学团队在一家著名杂志上发表了他们的成果。", zhugan: "The scientific team published their", xijie: "results in a prominent magazine." },
+  { id: 48, english: "Environmental factors play a major role in plant growth.", chinese: "环境因素在植物生长中起主要作用。", zhugan: "Environmental factors play a major", xijie: "role in plant growth." },
+  { id: 49, english: "Economic growth relies heavily on international trading networks.", chinese: "经济增长严重依赖国际贸易网络。", zhugan: "Economic growth relies heavily on", xijie: "international trading networks." },
+  { id: 50, english: "Artificial intelligence is changing the landscape of modern education.", chinese: "人工智能正在改变现代教育的格局。", zhugan: "Artificial intelligence is changing the", xijie: "landscape of modern education." },
+  { id: 51, english: "The library will be closed during the national holiday.", chinese: "图书馆将在国定假日期间关闭。", zhugan: "The library will be closed", xijie: "during the national holiday." },
+  { id: 52, english: "Good nutrition is essential for maintaining a healthy lifestyle.", chinese: "良好的营养对于维持健康的生活方式至关重要。", zhugan: "Good nutrition is essential for", xijie: "maintaining a healthy lifestyle." },
+  { id: 53, english: "The new framework aims to improve communication between teams.", chinese: "新框架旨在改善团队之间的沟通。", zhugan: "The new framework aims to", xijie: "improve communication between teams." },
+  { id: 54, english: "An extensive search failed to find the missing documents.", chinese: "广泛的搜索未能找到丢失的文件。", zhugan: "An extensive search failed to", xijie: "find the missing documents." },
+  { id: 55, english: "The statistical analysis showed a significant difference between groups.", chinese: "统计分析显示组别之间存在显著差异。", zhugan: "The statistical analysis showed a", xijie: "significant difference between groups." },
+  { id: 56, english: "Most universities provide career counseling services for new graduates.", chinese: "大多数大学为应届毕业生提供职业咨询服务。", zhugan: "Most universities provide career counseling", xijie: "services for new graduates." },
+  { id: 57, english: "The local government implemented strict regulations on waste disposal.", chinese: "地方政府对废物处置实施了严格的规定。", zhugan: "The local government implemented strict", xijie: "regulations on waste disposal." },
+  { id: 58, english: "A clear understanding of basic math is required for accounting.", chinese: "会计需要对基础数学有清晰的理解。", zhugan: "A clear understanding of basic", xijie: "math is required for accounting." },
+  { id: 59, english: "The exhibition showcases innovative designs from young fashion architects.", chinese: "该展览展示了年轻时尚建筑师的创新设计。", zhugan: "The exhibition showcases innovative designs", xijie: "from young fashion architects." },
+  { id: 60, english: "The laboratory report must be submitted before Friday afternoon.", chinese: "实验室报告必须在周五下午之前提交。", zhugan: "The laboratory report must be", xijie: "submitted before Friday afternoon." },
+  { id: 61, english: "Technology integration in classrooms can enhance student engagement outcomes.", chinese: "教室中的技术整合可以提高学生的参与成果。", zhugan: "Technology integration in classrooms can", xijie: "enhance student engagement outcomes." },
+  { id: 62, english: "Cultural diversity enriches the overall experience of university life.", chinese: "文化多样性丰富了大学生活的整体体验。", zhugan: "Cultural diversity enriches the overall", xijie: "experience of university life." },
+  { id: 63, english: "The research methodology requires both qualitative and quantitative data.", chinese: "该研究方法需要定性和定量数据。", zhugan: "The research methodology requires both", xijie: "qualitative and quantitative data." },
+  { id: 64, english: "The department offers scholarships based on brilliant academic performance.", chinese: "该部门根据出色的学术表现提供奖学金。", zhugan: "The department offers scholarships based", xijie: "on brilliant academic performance." },
+  { id: 65, english: "The sudden weather shift forced the cancellation of the match.", chinese: "天气的突然变化迫使比赛取消。", zhugan: "The sudden weather shift forced", xijie: "the cancellation of the match." },
+  { id: 66, english: "Please ensure you have read the safety guidelines carefully.", chinese: "请确保您已仔细阅读安全指南。", zhugan: "Please ensure you have read", xijie: "the safety guidelines carefully." },
+  { id: 67, english: "The main argument is supported by credible historical references.", chinese: "主要论点得到了可靠历史文献的支持。", zhugan: "The main argument is supported", xijie: "by credible historical references." },
+  { id: 68, english: "Online security measures are continuously updated to prevent fraud.", chinese: "在线安全措施会不断更新以防欺诈。", zhugan: "Online security measures are continuously", xijie: "updated to prevent fraud." },
+  { id: 69, english: "The university hospital provides medical services to all residents.", chinese: "大学医院为所有居民提供医疗服务。", zhugan: "The university hospital provides medical", xijie: "services to all residents." },
+  { id: 70, english: "Critical thinking is an essential skill for academic success.", chinese: "批判性思维是学术成功的必备技能。", zhugan: "Critical thinking is an essential", xijie: "skill for academic success." },
+  { id: 71, english: "The presentation will outline the major findings of our research.", chinese: "演示文稿将概述我们研究的主要发现。", zhugan: "The presentation will outline the", xijie: "major findings of our research." },
+  { id: 72, english: "Most international students adapt well to the new environment.", chinese: "大多数国际学生都能很好地适应新环境。", zhugan: "Most international students adapt well", xijie: "to the new environment." },
+  { id: 73, english: "The industrial revolution triggered massive economic and social changes.", chinese: "工业革命引发了巨大的经济和社会变革。", zhugan: "The industrial revolution triggered massive", xijie: "economic and social changes." },
+  { id: 74, english: "The budget proposal must be approved by the board.", chinese: "预算提案必须获得董事会的批准。", zhugan: "The budget proposal must be", xijie: "approved by the board." },
+  { id: 75, english: "The chemistry lab is equipped with state of the art tools.", chinese: "化学实验室配备了先进的工具。", zhugan: "The chemistry lab is equipped with", xijie: "state of the art tools." },
+  { id: 76, english: "The company announced a new strategy to increase sales figures.", chinese: "该公司宣布了一项增加销售额的新战略。", zhugan: "The company announced a new strategy", xijie: "to increase sales figures." },
+  { id: 77, english: "Students are encouraged to participate in community volunteer programs.", chinese: "鼓励学生参加社区志愿者项目。", zhugan: "Students are encouraged to participate", xijie: "in community volunteer programs." },
+  { id: 78, english: "Urbanization has led to a significant loss of green spaces.", chinese: "城市化导致绿地面积大幅减少。", zhugan: "Urbanization has led to a", xijie: "significant loss of green spaces." },
+  { id: 79, english: "The economic forecast suggests a slow recovery for next year.", chinese: "经济预测表明明年经济复苏缓慢。", zhugan: "The economic forecast suggests a", xijie: "slow recovery for next year." },
+  { id: 80, english: "Proper time management can significantly reduce study related stress levels.", chinese: "得当的时间管理可以显著减轻与学习相关的压力水平。", zhugan: "Proper time management can significantly", xijie: "reduce study related stress levels." },
+  { id: 81, english: "The marketing campaign targets young adults and working professionals.", chinese: "该营销活动针对年轻人群和在职专业人员。", zhugan: "The marketing campaign targets young", xijie: "adults and working professionals." },
+  { id: 82, english: "An effective argument requires logical reasoning and clear evidence backing.", chinese: "有效的论证需要逻辑推理和清晰的证据支持。", zhugan: "An effective argument requires logical reasoning", xijie: "and clear evidence backing." },
+  { id: 83, english: "The annual conference brings together experts from various domains.", chinese: "年度会议聚集了来自各个领域的专家。", zhugan: "The annual conference brings together", xijie: "experts from various domains." },
+  { id: 84, english: "The law firm specializes in intellectual property rights protection.", chinese: "该法律事务所专门从事知识产权保护。", zhugan: "The law firm specializes in intellectual", xijie: "property rights protection." },
+  { id: 85, english: "The seminar provided useful insights into modern teaching methodologies.", chinese: "该研讨会提供了对现代教学方法的有用见解。", zhugan: "The seminar provided useful insights into", xijie: "modern teaching methodologies." },
+  { id: 86, english: "Scientific research must adhere to strict ethical standards always.", chinese: "科学研究必须始终遵守严格的伦理标准。", zhugan: "Scientific research must adhere to", xijie: "strict ethical standards always." },
+  { id: 87, english: "The financial advisor recommended diversifying the investment portfolio options.", chinese: "金融顾问建议将投资组合选项多样化。", zhugan: "The financial advisor recommended diversifying the", xijie: "investment portfolio options." },
+  { id: 88, english: "The project team met all the deadlines successfully last semester.", chinese: "项目团队在上学期成功完成了所有截止日期。", zhugan: "The project team met all the", xijie: "deadlines successfully last semester." },
+  { id: 89, english: "The newly designed campus building is highly energy efficient.", chinese: "新设计的校园建筑具有很高的能源效率。", zhugan: "The newly designed campus building is", xijie: "highly energy efficient." },
+  { id: 90, english: "Social media platforms have changed how news is consumed daily.", chinese: "社交媒体平台改变了每天消费新闻的方式。", zhugan: "Social media platforms have changed how", xijie: "news is consumed daily." },
+  { id: 91, english: "The engineering students designed a prototype for a solar vehicle.", chinese: "工程专业的学生设计了一辆太阳能汽车的原型。", zhugan: "The engineering students designed a prototype", xijie: "for a solar vehicle." },
+  { id: 92, english: "Environmental pollution remains a critical global issue facing humanity today.", chinese: "环境污染仍是当今人类面临的严峻全球问题。", zhugan: "Environmental pollution remains a critical global", xijie: "issue facing humanity today." },
+  { id: 93, english: "The historical museum offers free admission on every first Sunday.", chinese: "历史博物馆在每个月的第一个周日提供免费入场。", zhugan: "The historical museum offers free admission", xijie: "on every first Sunday." },
+  { id: 94, english: "Effective resource allocation is key to successful project management execution.", chinese: "有效的资源分配是成功项目管理执行的关键。", zhugan: "Effective resource allocation is key to", xijie: "successful project management execution." },
+  { id: 95, english: "The study examines the relationship between sleep and academic performance.", chinese: "该研究探讨了睡眠与学术表现之间的关系。", zhugan: "The study examines the relationship between", xijie: "sleep and academic performance." },
+  { id: 96, english: "The newly appointed CEO plans to restructure company operations completely.", chinese: "新任命的首席执行官计划完全重组公司的业务。", zhugan: "The newly appointed CEO plans to", xijie: "restructure company operations completely." },
+  { id: 97, english: "Tourism has a significant impact on local economic stability growth.", chinese: "旅游业对当地经济的稳定增长有显著影响。", zhugan: "Tourism has a significant impact on", xijie: "local economic stability growth." },
+  { id: 98, english: "The conference presentation was well received by the audience community.", chinese: "会议演讲受到了观众群体的良好评价。", zhugan: "The conference presentation was well received", xijie: "by the audience community." },
+  { id: 99, english: "The research paper explores alternative energy solutions for remote islands.", chinese: "该研究论文探讨了偏远岛屿的替代能源解决方案。", zhugan: "The research paper explores alternative energy", xijie: "solutions for remote islands." },
+  { id: 100, english: "Students must obtain permission before using the laboratory equipment.", chinese: "学生在使用实验室设备前必须获得许可。", zhugan: "Students must obtain permission before", xijie: "using the laboratory equipment." },
+  { id: 101, english: "The global economy is showing signs of gradual recovery recently.", chinese: "全球经济近期正显示出逐渐复苏的迹象。", zhugan: "The global economy is showing signs", xijie: "of gradual recovery recently." },
+  { id: 102, english: "The university provides free internet access across the entire campus.", chinese: "学校在整个校园内提供免费的互联网接入。", zhugan: "The university provides free internet access", xijie: "across the entire campus." },
+  { id: 103, english: "Online databases provide a wealth of information for research papers.", chinese: "在线数据库为研究论文提供了大量的信息。", zhugan: "Online databases provide a wealth of", xijie: "information for research papers." },
+  { id: 104, english: "The professor emphasized the importance of primary source material references.", chinese: "教授强调了主要一手资料文献参考的重要性。", zhugan: "The professor emphasized the importance of", xijie: "primary source material references." },
+  { id: 105, english: "A systematic review of policies is needed to ensure compliance.", chinese: "需要对政策进行系统审查以确保合规性。", zhugan: "A systematic review of policies is", xijie: "needed to ensure compliance." },
+  { id: 106, english: "The marketing strategy focus should be on building brand loyalty.", chinese: "营销策略的重点应该放在建立品牌忠诚度上。", zhugan: "The marketing strategy focus should be", xijie: "on building brand loyalty." },
+  { id: 107, english: "The chemical reaction produced a stable compound after heating process.", chinese: "加热过程后，化学反应产生了一种稳定的化合物。", zhugan: "The chemical reaction produced a stable", xijie: "compound after heating process." },
+  { id: 108, english: "The committee will announce the scholarship winners by next month.", chinese: "委员会将在下个月前宣布奖学金获得者名单。", zhugan: "The committee will announce the scholarship", xijie: "winners by next month." },
+  { id: 109, english: "Good customer service is critical for building long term relationships.", chinese: "良好的客户服务对于建立长期关系至关重要。", zhugan: "Good customer service is critical for", xijie: "building long term relationships." },
+  { id: 110, english: "The engineering department designed an innovative water filtration system tool.", chinese: "工程部设计了一种创新的水过滤系统工具。", zhugan: "The engineering department designed an innovative", xijie: "water filtration system tool." },
+  { id: 111, english: "The economic crisis led to high unemployment rates nationwide significantly.", chinese: "经济危机导致全国失业率显著上升。", zhugan: "The economic crisis led to high", xijie: "unemployment rates nationwide significantly." },
+  { id: 112, english: "Sustainable development requires balancing economic growth and environmental care.", chinese: "可持续发展需要平衡经济增长和环境关怀。", zhugan: "Sustainable development requires balancing economic", xijie: "growth and environmental care." },
+  { id: 113, english: "The software update resolved several security vulnerabilities reported recently.", chinese: "该软件更新解决了最近报告的几个安全漏洞。", zhugan: "The software update resolved several security", xijie: "vulnerabilities reported recently." },
+  { id: 114, english: "The course covers basic principles of macroeconomics and financial markets.", chinese: "该课程涵盖了宏观经济学和金融市场的基本原理。", zhugan: "The course covers basic principles of", xijie: "macroeconomics and financial markets." },
+  { id: 115, english: "All students must submit their course selection forms before deadline.", chinese: "所有学生必须在截止日期前提交选课表。", zhugan: "All students must submit their course", xijie: "selection forms before deadline." },
+  { id: 116, english: "The company plans to expand its business into international markets.", chinese: "该公司计划将其业务扩展到国际市场。", zhugan: "The company plans to expand its", xijie: "business into international markets." },
+  { id: 117, english: "The research team discovered a new plant species in rainforest.", chinese: "研究小组在热带雨林中发现了一种新的植物物种。", zhugan: "The research team discovered a new", xijie: "plant species in rainforest." },
+  { id: 118, english: "The lecture will discuss the impact of technology on society.", chinese: "讲座将讨论技术对社会的影响。", zhugan: "The lecture will discuss the impact", xijie: "of technology on society." },
+  { id: 119, english: "An executive summary should be concise and cover all points.", chinese: "执行摘要应当简明扼要并涵盖所有要点。", zhugan: "An executive summary should be concise", xijie: "and cover all points." },
+  { id: 120, english: "The design studio provides hands on experience for art students.", chinese: "设计工作室为艺术系学生提供实践经验。", zhugan: "The design studio provides hands on", xijie: "experience for art students." },
+  { id: 121, english: "The new housing policy aims to assist low income families.", chinese: "新的住房政策旨在帮助低收入家庭。", zhugan: "The new housing policy aims to", xijie: "assist low income families." },
+  { id: 122, english: "The biology lab requires proper sterilization of all diagnostic tools.", chinese: "生物实验室要求对所有诊断工具进行适当的消毒。", zhugan: "The biology lab requires proper sterilization", xijie: "of all diagnostic tools." },
+  { id: 123, english: "Public awareness campaigns can help reduce energy consumption habits dramatically.", chinese: "公众意识宣传活动可以显著帮助减少能源消耗习惯。", zhugan: "Public awareness campaigns can help reduce", xijie: "energy consumption habits dramatically." },
+  { id: 124, english: "The financial report shows a steady increase in quarterly profits.", chinese: "财务报告显示季度利润稳步增长。", zhugan: "The financial report shows a steady", xijie: "increase in quarterly profits." },
+  { id: 125, english: "The historical novel provides vivid details about the medieval era.", chinese: "这部历史小说提供了关于中世纪时期的生动细节。", zhugan: "The historical novel provides vivid details", xijie: "about the medieval era." },
+  { id: 126, english: "The professor offered constructive feedback on my research draft paper.", chinese: "教授对我的研究草案论文提出了建设性的反馈意見。", zhugan: "The professor offered constructive feedback on", xijie: "my research draft paper." },
+  { id: 127, english: "The student union organized a charity event for local communities.", chinese: "学生会为当地社区组织了一场慈善活动。", zhugan: "The student union organized a charity", xijie: "event for local communities." },
+  { id: 128, english: "A detailed map is available at the campus visitor center.", chinese: "校园访客中心提供详细的地图。", zhugan: "A detailed map is available at", xijie: "the campus visitor center." },
+  { id: 129, english: "The medical team monitored the patient's condition around the clock.", chinese: "医疗团队全天候监视病人的状况。", zhugan: "The medical team monitored the patient's", xijie: "condition around the clock." },
+  { id: 130, english: "The business plan outlines clear milestones for the upcoming year.", chinese: "业务计划概述了新一年的明确里程碑。", zhugan: "The business plan outlines clear milestones", xijie: "for the upcoming year." },
+  { id: 131, english: "The archaeological excavation revealed ancient artifacts buried underground deep.", chinese: "考古发掘发现了埋在地下深处的古代文物。", zhugan: "The archaeological excavation revealed ancient", xijie: "artifacts buried underground deep." },
+  { id: 132, english: "Proper ventilation is necessary to maintain clean indoor air quality.", chinese: "适当的通风对于保持清洁的室内空气质量至关重要。", zhugan: "Proper ventilation is necessary to maintain", xijie: "clean indoor air quality." },
+  { id: 133, english: "The university selection criteria depend strongly on academic merit records.", chinese: "大学的录取标准强烈取决于学术优秀记录。", zhugan: "The university selection criteria depend strongly", xijie: "on academic merit records." },
+  { id: 134, english: "The online tutorial provides step by step guidance for installation.", chinese: "在线教程为安装提供了逐步指导。", zhugan: "The online tutorial provides step by step", xijie: "guidance for installation." },
+  { id: 135, english: "Regular physical exercise contributes to better mental health wellness outcomes.", chinese: "规律的体育锻炼有助于获得更好的心理健康结果。", zhugan: "Regular physical exercise contributes to better", xijie: "mental health wellness outcomes." },
+  { id: 136, english: "The company faces intense competition from emerging global tech startups.", chinese: "该公司下面临着来自新兴全球科技创业公司的激烈竞争。", zhugan: "The company faces intense competition from", xijie: "emerging global tech startups." },
+  { id: 137, english: "The new transit system connecting cities will open next month.", chinese: "连接城市的新交通系统将于下个月开放。", zhugan: "The new transit system connecting cities", xijie: "will open next month." },
+  { id: 138, english: "An objective perspective is essential for conducting scientific data evaluation.", chinese: "客观的视角对于进行科学数据评估至关重要。", zhugan: "An objective perspective is essential for", xijie: "conducting scientific data evaluation." },
+  { id: 139, english: "The chemistry professor explained the molecular structure of water bonds.", chinese: "化学教授解释了水分子的分子结构。", zhugan: "The chemistry professor explained the molecular", xijie: "structure of water bonds." },
+  { id: 140, english: "The art gallery features contemporary works from local talented creators.", chinese: "美术馆展出了当地才华横溢的创作者的当代作品。", zhugan: "The art gallery features contemporary works", xijie: "from local talented creators." },
+  { id: 141, english: "The research grant supports studies on marine ecosystem preservation strategies.", chinese: "该研究资助支持对海洋生态系统保护策略的研究。", zhugan: "The research grant supports studies on", xijie: "marine ecosystem preservation strategies." },
+  { id: 142, english: "The customer feedback survey helps to improve product design choices.", chinese: "客户反馈调查有助于改进产品设计选择。", zhugan: "The customer feedback survey helps to", xijie: "improve product design choices." },
+  { id: 143, english: "The local library offers literacy programs for children and adults.", chinese: "当地图书馆为儿童和成人提供读写能力计划。", zhugan: "The local library offers literacy programs", xijie: "for children and adults." },
+  { id: 144, english: "Digital transformation is a top priority for modern business enterprises.", chinese: "数字化转型是现代企业公司的重中之重。", zhugan: "Digital transformation is a top priority", xijie: "for modern business enterprises." },
+  { id: 145, english: "The experimental results confirmed the initial hypothesis made by team.", chinese: "实验结果证实了团队最初提出的假设。", zhugan: "The experimental results confirmed the initial", xijie: "hypothesis made by team." },
   { id: 146, english: "A comprehensive review of literature is required for the proposal.", chinese: "该提议需要对文献进行全面的审查。", zhugan: "A comprehensive review of literature", xijie: "is required for the proposal." },
   { id: 147, english: "The expansion of the tech industry created a high demand for developers.", chinese: "技术行业的扩张创造了对开发人员的高需求。", zhugan: "The expansion of the tech", xijie: "industry created a high demand for developers." },
   { id: 148, english: "Statistical evidence supports the theory of global temperature rise.", chinese: "统计证据支持全球气温上升的理论。", zhugan: "Statistical evidence supports the theory", xijie: "of global temperature rise." },
@@ -159,13 +159,12 @@ const WFD_LIST = [
   { id: 155, english: "You can find the complex form on the website.", chinese: "你可以在网站上找到那个复杂的表格。", zhugan: "You can find the complex", xijie: "form on the website." }
 ];
 
-// ==========================================
-// 2. 状态管理与核心阶梯刷题逻辑
-// ==========================================
-let currentQuestionIndex = 0;
-let currentStage = 1; // 1: 照抄阶段; 2: 盲测阶段
+// =========================================================================
+// 2. 状态管理与线性导航核心逻辑
+// =========================================================================
+let currentQuestionIndex = -1; // -1 表示尚未选定题目（未激活状态）
+let currentStage = 1;          // 1: 照抄阶段; 2: 盲测阶段
 
-// 安全节点处理工具（防止因 HTML 偶发缺失导致系统崩溃）
 function updateNodeText(id, text) {
   const node = document.getElementById(id);
   if (node) node.innerText = text || '';
@@ -176,60 +175,60 @@ function setNodeDisplay(id, displayStyle) {
   if (node) node.style.display = displayStyle;
 }
 
-// 核心渲染函数：完全契合你的 HTML 命名结构
+// 核心渲染：支持激活答题面板切换
 function renderQuestion() {
-  const q = WFD_LIST[currentQuestionIndex];
-  if (!q) return;
+  if (currentQuestionIndex < 0 || currentQuestionIndex >= WFD_LIST.length) {
+    // 未激活或索引越界，展示欢迎选择器
+    setNodeDisplay("welcome-section", "block");
+    setNodeDisplay("main-content-zone", "none");
+    const titleNode = document.getElementById("title-text");
+    if (titleNode) titleNode.innerHTML = `🎯 WFD 阶梯式全屏背诵系统`;
+    return;
+  }
 
-  // 1. 更新顶部系统大标题
+  // 隐藏欢迎，展示核心练习区
+  setNodeDisplay("welcome-section", "none");
+  setNodeDisplay("main-content-zone", "block");
+
+  const q = WFD_LIST[currentQuestionIndex];
+
+  // 1. 更新大标题
   const titleNode = document.getElementById("title-text");
   if (titleNode) titleNode.innerHTML = `🎯 WFD 阶梯式全屏背诵系统 (第 ${q.id} 题)`;
 
-  // 2. 控制阶梯显示内容
+  // 2. 控制两阶段显示
   if (currentStage === 1) {
-    // 阶段一：全开放展示，引导用户照抄
     updateNodeText("step-indicator", "阶段一：请照抄一遍上方完整英文句");
     setNodeDisplay("hint-section", "block");
-    setNodeDisplay("row-translation", "block");
-
-    // 填充数据节点
+    
     updateNodeText("main-stem", q.zhugan || q.english);
     updateNodeText("main-stem-cn", q.chinese ? ` (主干翻译)` : '');
     updateNodeText("details", q.xijie || '...');
-    updateNodeText("details-cn", '');
     updateNodeText("full-english", q.english);
     updateNodeText("full-translation", q.chinese);
 
-    // 隐藏对账区与考点，展示提交按钮，隐藏下一题
     setNodeDisplay("check-result-zone", "none");
     setNodeDisplay("review-section", "none");
-    setNodeDisplay("next-btn", "none");
-    setNodeDisplay("submit-btn", "inline-block");
   } else {
-    // 阶段二：斩断所有英文提示，只保留中文进行全屏默写盲测
     updateNodeText("step-indicator", "阶段二：英文提示已切断！请凭借记忆，看着下方中文进行全屏盲测默写");
-    setNodeDisplay("hint-section", "none"); // 隐藏主干、细节、完整英文
-    setNodeDisplay("row-translation", "block"); // 只展示完整中文
-    
-    // 隐藏对账区与考点，让用户能干净地重新输入
+    setNodeDisplay("hint-section", "none"); 
+    updateNodeText("full-translation", q.chinese);
+
     setNodeDisplay("check-result-zone", "none");
     setNodeDisplay("review-section", "none");
-    setNodeDisplay("next-btn", "none");
-    setNodeDisplay("submit-btn", "inline-block");
   }
 
-  // 清理反馈与文本输入框
+  // 清空文本反馈区
   const feedbackNode = document.getElementById("feedback");
   if (feedbackNode) {
     feedbackNode.innerText = '';
     feedbackNode.className = "feedback-msg";
   }
-  
   const userInput = document.getElementById("user-input");
   if (userInput) userInput.value = '';
 }
 
-// 自动化生成考点剧透（提取大于 4 字符的词汇或词尾变化）
+// 剧透点分析
 function generateTestPoints(text) {
   const pointsList = document.getElementById("test-points");
   if (!pointsList) return;
@@ -237,14 +236,10 @@ function generateTestPoints(text) {
 
   const cleanText = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
   const words = cleanText.split(/\s+/);
-  
-  // 智能抓取常考点：含有 ed、ing、s/es 或者是长难词的作为考点剧透
   const targets = words.filter((w, i) => w.length > 4 && (w.endsWith('s') || w.endsWith('ed') || w.endsWith('ing') || i % 3 === 0));
   const uniqueTargets = [...new Set(targets)].slice(0, 4);
 
-  if (uniqueTargets.length === 0) {
-    uniqueTargets.push(words[0]);
-  }
+  if (uniqueTargets.length === 0) uniqueTargets.push(words[0]);
 
   uniqueTargets.forEach(word => {
     const li = document.createElement("li");
@@ -253,15 +248,14 @@ function generateTestPoints(text) {
   });
 }
 
-// 处理提交验证逻辑
+// 提交逻辑
 function handleSubmit() {
+  if (currentQuestionIndex < 0) return;
   const q = WFD_LIST[currentQuestionIndex];
-  if (!q) return;
 
   const userInputField = document.getElementById("user-input");
   const userText = userInputField ? userInputField.value.trim() : "";
   const targetText = q.english.trim();
-
   const feedbackNode = document.getElementById("feedback");
 
   if (!userText) {
@@ -272,37 +266,28 @@ function handleSubmit() {
     return;
   }
 
-  // 极度鲁棒性校验：忽略末尾标点符号、连字符和大小写进行精准对账
   const formatText = (t) => t.toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ");
   const isCorrect = formatText(userText) === formatText(targetText);
 
   if (currentStage === 1) {
-    // 阶段一提交处理
     if (isCorrect) {
-      feedbackNode.innerText = "🎉 照抄通过！点击继续进入阶段二盲测！";
+      feedbackNode.innerText = "🎉 照抄通过！即将自动进入阶段二盲测！";
       feedbackNode.className = "feedback-msg msg-success";
-      
-      // 1.5秒后自动切换至盲测
       setTimeout(() => {
         currentStage = 2;
         renderQuestion();
       }, 1500);
     } else {
-      feedbackNode.innerText = "❌ 照抄中有字母写错或遗漏了哦，请仔细核对下方绿色标答！";
+      feedbackNode.innerText = "❌ 照抄错误，请仔细核对标答拼写！";
       feedbackNode.className = "feedback-msg msg-error";
-      
-      // 展示对账单
       updateNodeText("res-user", userText);
       updateNodeText("res-target", targetText);
       setNodeDisplay("check-result-zone", "block");
     }
   } else {
-    // 阶段二（盲测）提交处理
     updateNodeText("res-user", userText);
     updateNodeText("res-target", targetText);
     setNodeDisplay("check-result-zone", "block");
-
-    // 生成考点分析剧透
     generateTestPoints(targetText);
     setNodeDisplay("review-section", "block");
 
@@ -310,50 +295,76 @@ function handleSubmit() {
       feedbackNode.innerText = "🏆 奇迹！盲测满分通关！完美拿下该高频题！";
       feedbackNode.className = "feedback-msg msg-success";
     } else {
-      feedbackNode.innerText = "💡 盲测结束！请比对下方对账单红绿信息进行查漏补缺。";
+      feedbackNode.innerText = "💡 盲测结束！请比对账单进行查漏补缺。";
       feedbackNode.className = "feedback-msg msg-error";
     }
-
-    // 盲测结束后，放出下一题按钮，隐藏提交
-    setNodeDisplay("submit-btn", "none");
-    setNodeDisplay("next-btn", "inline-block");
   }
 }
 
-// 切换至下一题（随机切题）
-function handleNextQuestion() {
-  currentStage = 1; // 回滚至阶段一
-  currentQuestionIndex = Math.floor(Math.random() * WFD_LIST.length); // 随机抽取 155 题中的一题
+// 线性导航控制（上一题、下一题）
+function changeQuestion(direction) {
+  if (currentQuestionIndex === -1) {
+    currentQuestionIndex = direction === 'next' ? 0 : WFD_LIST.length - 1;
+  } else {
+    if (direction === 'next') {
+      currentQuestionIndex = (currentQuestionIndex + 1) % WFD_LIST.length;
+    } else {
+      currentQuestionIndex = (currentQuestionIndex - 1 + WFD_LIST.length) % WFD_LIST.length;
+    }
+  }
+  currentStage = 1; // 换题一律初始化为阶段一
   renderQuestion();
 }
 
-// ==========================================
-// 3. 页面生命周期初始化与事件绑定 (完美融合跳过逻辑)
-// ==========================================
-window.onload = function() {
-  if (WFD_LIST.length > 0) {
-    // 页面初次载入，随机选一题开始阶梯刷题
-    currentQuestionIndex = Math.floor(Math.random() * WFD_LIST.length);
-    renderQuestion();
+// 精准按题号跳转输入
+function handleJumpToQuestion() {
+  const jumpInput = document.getElementById("jump-id-input");
+  if (!jumpInput) return;
+  
+  const targetId = parseInt(jumpInput.value.trim(), 10);
+  
+  if (isNaN(targetId) || targetId < 1 || targetId > 155) {
+    alert("⚠️ 请输入正确的题号范围（1 到 155 之间）");
+    return;
   }
+  
+  const targetIndex = WFD_LIST.findIndex(q => q.id === targetId);
+  
+  if (targetIndex !== -1) {
+    currentStage = 1;
+    currentQuestionIndex = targetIndex;
+    renderQuestion();
+    jumpInput.value = ''; // 清空选择框
+  } else {
+    alert("❌ 未找到对应的题目数据！");
+  }
+}
 
-  // 绑定提交验证按钮
+// =========================================================================
+// 3. 事件绑定初始化
+// =========================================================================
+window.onload = function() {
+  // 初始不触发任何题目，保持未选题的欢迎画面
+  renderQuestion();
+
+  // 线性导航绑定
+  document.getElementById("prev-btn").onclick = () => changeQuestion('prev');
+  document.getElementById("next-btn").onclick = () => changeQuestion('next');
+
+  // 验证按钮绑定
   const submitBtn = document.getElementById("submit-btn");
   if (submitBtn) submitBtn.onclick = handleSubmit;
 
-  // 绑定下一题箭头按钮（通关/盲测结束后点击的那个）
-  const nextBtn = document.getElementById("next-btn");
-  if (nextBtn) nextBtn.onclick = handleNextQuestion;
-
-  // 🌟 绑定跳过按钮逻辑：一键洗牌直接切新题
-  const skipBtn = document.getElementById("skip-btn");
-  if (skipBtn) {
-    skipBtn.onclick = function() {
-      // 隐蔽面板和考点
-      setNodeDisplay("check-result-zone", "none");
-      setNodeDisplay("review-section", "none");
-      // 切新题并归位到阶段一
-      handleNextQuestion();
+  // 选题跳转绑定
+  const jumpBtn = document.getElementById("jump-btn");
+  if (jumpBtn) jumpBtn.onclick = handleJumpToQuestion;
+  
+  const jumpInput = document.getElementById("jump-id-input");
+  if (jumpInput) {
+    jumpInput.onkeydown = function(event) {
+      if (event.key === "Enter") {
+        handleJumpToQuestion();
+      }
     };
   }
 };
