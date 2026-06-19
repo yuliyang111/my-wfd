@@ -160,109 +160,200 @@ const WFD_LIST = [
 ];
 
 // ==========================================
-// 2. 核心渲染与控制逻辑 (无缩水、高容错版)
+// 2. 状态管理与核心阶梯刷题逻辑
 // ==========================================
-let currentIndex = 0;
-let isDetailShown = false; 
+let currentQuestionIndex = 0;
+let currentStage = 1; // 1: 照抄阶段; 2: 盲测阶段
 
-// 强力渲染辅助函数：赋值的同时将灰色骨架屏的样式扒光
-function safeRender(elementId, text) {
-  const el = document.getElementById(elementId);
-  if (el) {
-    el.innerText = text || '';
-    // 强制清除所有的骨架屏或加载类名，防止灰色块遮挡
-    el.classList.remove("loading", "skeleton", "gray-bar", "placeholder");
-    el.style.background = "none";
-    el.style.backgroundColor = "transparent";
-  }
+// 安全节点处理工具（防止因 HTML 偶发缺失导致系统崩溃）
+function updateNodeText(id, text) {
+  const node = document.getElementById(id);
+  if (node) node.innerText = text || '';
 }
 
-// 核心渲染主函数
-function showQuestion(index) {
-  const q = WFD_LIST[index];
+function setNodeDisplay(id, displayStyle) {
+  const node = document.getElementById(id);
+  if (node) node.style.display = displayStyle;
+}
+
+// 核心渲染函数：完全契合你的 HTML 命名结构
+function renderQuestion() {
+  const q = WFD_LIST[currentQuestionIndex];
   if (!q) return;
 
-  // 1. 更新大标题上的题号
-  const titleEl = document.querySelector('h2') || document.querySelector('.title') || document.getElementById("title");
-  if (titleEl) {
-    titleEl.innerHTML = `<span class="icon">🎯</span> WFD 155 (第 ${q.id} 题)`;
-  }
+  // 1. 更新顶部系统大标题
+  const titleNode = document.getElementById("title-text");
+  if (titleNode) titleNode.innerHTML = `🎯 WFD 阶梯式全屏背诵系统 (第 ${q.id} 题)`;
 
-  // 2. 渲染主干和细节
-  safeRender("zhugan-en", q.zhugan);
-  safeRender("zhugan-zh", q.chinese ? `（${q.chinese.slice(0, 12)}...）` : '');
-  safeRender("zhugan-cn", q.chinese ? `（${q.chinese.slice(0, 12)}...）` : '');
-  
-  safeRender("xijie-en", q.xijie);
-  safeRender("xj-zh", q.chinese ? `（...${q.chinese.slice(12)}）` : '');
-  safeRender("xijie-zh", q.chinese ? `（...${q.chinese.slice(12)}）` : '');
-  safeRender("xijie-cn", q.chinese ? `（...${q.chinese.slice(12)}）` : '');
+  // 2. 控制阶梯显示内容
+  if (currentStage === 1) {
+    // 阶段一：全开放展示，引导用户照抄
+    updateNodeText("step-indicator", "阶段一：请照抄一遍上方完整英文句");
+    setNodeDisplay("hint-section", "block");
+    setNodeDisplay("row-translation", "block");
 
-  // 3. 安全渲染完整英中文
-  safeRender("full-en", q.english);
-  safeRender("english-text", q.english);
-  safeRender("full-zh", q.chinese);
-  safeRender("chinese-text", q.chinese);
+    // 填充数据节点
+    updateNodeText("main-stem", q.zhugan || q.english);
+    updateNodeText("main-stem-cn", q.chinese ? ` (主干翻译)` : '');
+    updateNodeText("details", q.xijie || '...');
+    updateNodeText("details-cn", '');
+    updateNodeText("full-english", q.english);
+    updateNodeText("full-translation", q.chinese);
 
-  // 4. 自动清空用户文本框
-  const inputEl = document.querySelector('textarea') || document.getElementById("user-input");
-  if (inputEl) {
-    inputEl.value = '';
-  }
-
-  // 5. 切换到新题时，重置控制隐藏/显示的面板状态
-  isDetailShown = false;
-  const detailsCont = document.getElementById("details-container") || document.getElementById("analysis-container");
-  if (detailsCont) {
-    detailsCont.style.display = "none";
-  }
-  
-  const toggleBtn = document.getElementById("toggle-btn");
-  if (toggleBtn) {
-    toggleBtn.innerText = "显示后半句及解析";
-  }
-}
-
-// 展开/收起解析的控制逻辑
-function toggleDetail() {
-  const detailsCont = document.getElementById("details-container") || document.getElementById("analysis-container");
-  const btn = document.getElementById("toggle-btn");
-
-  isDetailShown = !isDetailShown;
-
-  if (isDetailShown) {
-    if (detailsCont) detailsCont.style.display = "block";
-    if (btn) btn.innerText = "隐藏后半句及解析";
+    // 隐藏对账区与考点，展示提交按钮，隐藏下一题
+    setNodeDisplay("check-result-zone", "none");
+    setNodeDisplay("review-section", "none");
+    setNodeDisplay("next-btn", "none");
+    setNodeDisplay("submit-btn", "inline-block");
   } else {
-    if (detailsCont) detailsCont.style.display = "none";
-    if (btn) btn.innerText = "显示后半句及解析";
+    // 阶段二：斩断所有英文提示，只保留中文进行全屏默写盲测
+    updateNodeText("step-indicator", "阶段二：英文提示已切断！请凭借记忆，看着下方中文进行全屏盲测默写");
+    setNodeDisplay("hint-section", "none"); // 隐藏主干、细节、完整英文
+    setNodeDisplay("row-translation", "block"); // 只展示完整中文
+    
+    // 隐藏对账区与考点，让用户能干净地重新输入
+    setNodeDisplay("check-result-zone", "none");
+    setNodeDisplay("review-section", "none");
+    setNodeDisplay("next-btn", "none");
+    setNodeDisplay("submit-btn", "inline-block");
+  }
+
+  // 清理反馈与文本输入框
+  const feedbackNode = document.getElementById("feedback");
+  if (feedbackNode) {
+    feedbackNode.innerText = '';
+    feedbackNode.className = "feedback-msg";
+  }
+  
+  const userInput = document.getElementById("user-input");
+  if (userInput) userInput.value = '';
+}
+
+// 自动化生成考点剧透（提取大于 4 字符的词汇或词尾变化）
+function generateTestPoints(text) {
+  const pointsList = document.getElementById("test-points");
+  if (!pointsList) return;
+  pointsList.innerHTML = '';
+
+  const cleanText = text.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+  const words = cleanText.split(/\s+/);
+  
+  // 智能抓取常考点：含有 ed、ing、s/es 或者是长难词的作为考点剧透
+  const targets = words.filter((w, i) => w.length > 4 && (w.endsWith('s') || w.endsWith('ed') || w.endsWith('ing') || i % 3 === 0));
+  const uniqueTargets = [...new Set(targets)].slice(0, 4);
+
+  if (uniqueTargets.length === 0) {
+    uniqueTargets.push(words[0]);
+  }
+
+  uniqueTargets.forEach(word => {
+    const li = document.createElement("li");
+    li.innerHTML = `注意核心词汇的拼写与单复数/时态：<b>${word}</b>`;
+    pointsList.appendChild(li);
+  });
+}
+
+// 处理提交验证逻辑
+function handleSubmit() {
+  const q = WFD_LIST[currentQuestionIndex];
+  if (!q) return;
+
+  const userInputField = document.getElementById("user-input");
+  const userText = userInputField ? userInputField.value.trim() : "";
+  const targetText = q.english.trim();
+
+  const feedbackNode = document.getElementById("feedback");
+
+  if (!userText) {
+    if (feedbackNode) {
+      feedbackNode.innerText = "⚠️ 请先输入句子再提交验证！";
+      feedbackNode.className = "feedback-msg msg-error";
+    }
+    return;
+  }
+
+  // 极度鲁棒性校验：忽略末尾标点符号、连字符和大小写进行精准对账
+  const formatText = (t) => t.toLowerCase().replace(/[^a-z0-9\s]/g, "").replace(/\s+/g, " ");
+  const isCorrect = formatText(userText) === formatText(targetText);
+
+  if (currentStage === 1) {
+    // 阶段一提交处理
+    if (isCorrect) {
+      feedbackNode.innerText = "🎉 照抄通过！点击继续进入阶段二盲测！";
+      feedbackNode.className = "feedback-msg msg-success";
+      
+      // 1.5秒后自动切换至盲测
+      setTimeout(() => {
+        currentStage = 2;
+        renderQuestion();
+      }, 1500);
+    } else {
+      feedbackNode.innerText = "❌ 照抄中有字母写错或遗漏了哦，请仔细核对下方绿色标答！";
+      feedbackNode.className = "feedback-msg msg-error";
+      
+      // 展示对账单
+      updateNodeText("res-user", userText);
+      updateNodeText("res-target", targetText);
+      setNodeDisplay("check-result-zone", "block");
+    }
+  } else {
+    // 阶段二（盲测）提交处理
+    updateNodeText("res-user", userText);
+    updateNodeText("res-target", targetText);
+    setNodeDisplay("check-result-zone", "block");
+
+    // 生成考点分析剧透
+    generateTestPoints(targetText);
+    setNodeDisplay("review-section", "block");
+
+    if (isCorrect) {
+      feedbackNode.innerText = "🏆 奇迹！盲测满分通关！完美拿下该高频题！";
+      feedbackNode.className = "feedback-msg msg-success";
+    } else {
+      feedbackNode.innerText = "💡 盲测结束！请比对下方对账单红绿信息进行查漏补缺。";
+      feedbackNode.className = "feedback-msg msg-error";
+    }
+
+    // 盲测结束后，放出下一题按钮，隐藏提交
+    setNodeDisplay("submit-btn", "none");
+    setNodeDisplay("next-btn", "inline-block");
   }
 }
 
-// 随机切题函数
-function nextQuestion() {
-  if (typeof WFD_LIST === 'undefined' || WFD_LIST.length === 0) return;
-  currentIndex = Math.floor(Math.random() * WFD_LIST.length);
-  showQuestion(currentIndex);
+// 切换至下一题（随机切题）
+function handleNextQuestion() {
+  currentStage = 1; // 回滚至阶段一
+  currentQuestionIndex = Math.floor(Math.random() * WFD_LIST.length); // 随机抽取 155 题中的一题
+  renderQuestion();
 }
 
 // ==========================================
-// 3. 页面生命周期初始化与事件绑定
+// 3. 页面生命周期初始化与事件绑定 (完美融合跳过逻辑)
 // ==========================================
 window.onload = function() {
-  if (typeof WFD_LIST !== 'undefined' && WFD_LIST.length > 0) {
-    nextQuestion(); // 首次进入自动加载一题
+  if (WFD_LIST.length > 0) {
+    // 页面初次载入，随机选一题开始阶梯刷题
+    currentQuestionIndex = Math.floor(Math.random() * WFD_LIST.length);
+    renderQuestion();
   }
 
-  // 绑定显示解析按钮
-  const toggleBtn = document.getElementById("toggle-btn");
-  if (toggleBtn) {
-    toggleBtn.onclick = toggleDetail;
-  }
+  // 绑定提交验证按钮
+  const submitBtn = document.getElementById("submit-btn");
+  if (submitBtn) submitBtn.onclick = handleSubmit;
 
-  // 智能适配按钮触发
-  const nextBtn = document.getElementById("next-btn") || document.getElementById("submit-btn") || document.querySelector('.btn-next') || document.querySelector('button');
-  if (nextBtn) {
-    nextBtn.onclick = nextQuestion;
+  // 绑定下一题箭头按钮（通关/盲测结束后点击的那个）
+  const nextBtn = document.getElementById("next-btn");
+  if (nextBtn) nextBtn.onclick = handleNextQuestion;
+
+  // 🌟 绑定跳过按钮逻辑：一键洗牌直接切新题
+  const skipBtn = document.getElementById("skip-btn");
+  if (skipBtn) {
+    skipBtn.onclick = function() {
+      // 隐蔽面板和考点
+      setNodeDisplay("check-result-zone", "none");
+      setNodeDisplay("review-section", "none");
+      // 切新题并归位到阶段一
+      handleNextQuestion();
+    };
   }
 };
